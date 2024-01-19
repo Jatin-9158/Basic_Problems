@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+class Solution {
+public:
+    bool isPalindrome(int x) {
+      long int  num2=x;
+      long int num1=0,num=0;
+      if(x<0)
+      {
+          return false;
+      }
+      else
+      {
+          while(x>0)
+          {
+              num1=x%10;
+              num=num*10+num1;
+              x=x/10;
+          }
+          if(num2==num)
+          {
+              return true;
+          }
+          return false;
+      }
+    }
+};
+int main()
+{
+  Solution S;
+  cout<<S.isPalindrome(512);
+  return 0;
+}
