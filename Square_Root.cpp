@@ -31,7 +31,7 @@ double Square_Root(int x)
 {
     double n=Square_Root_Unprecised(x);
     double step=0.001;
-    while(n*n<=x)
+    while(n*n<x)
     {
        n=n+step;
        
