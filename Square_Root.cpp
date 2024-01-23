@@ -38,11 +38,7 @@ double Square_Root(int x)
     }
     return n;
 }
-int main()
-{
- std::cout<<Square_Root(15);
- return 0;
-}
+
 int main()
 {
  system("cls");
