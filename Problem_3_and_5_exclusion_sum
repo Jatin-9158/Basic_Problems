@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int T1,N;
+    cin>>T1;
+    int arr[T1];
+    for(int i=0;i<T1;i++)
+    {
+       cin>>N;
+       for(int j=0;j<N;j++)
+       {
+           if(j%3==0 || j%5==0)
+           {
+               arr[i]=j;
+           }
+       }
+    }
+    for(int i=0;i<T1;i++)
+    {
+        cout<<arr[i]<<endl;
+    }
+    
+
+}
