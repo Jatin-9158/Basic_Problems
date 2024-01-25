@@ -4,7 +4,7 @@ int main()
 {
     int T1,N;
     cin>>T1;
-    int arr[T1];
+    int arr[T1]={0};
     for(int i=0;i<T1;i++)
     {
        cin>>N;
