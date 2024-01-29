@@ -16,3 +16,9 @@ int sumOfMaxMin(int arr[], int n){
 	int sum=Min_No+Max_No;
 	return sum;
 }
+int main()
+{
+ int arr[4]={2,4,3,54};
+ std::cout<<sumOfMaxMin(arr,4);
+ return 0;
+}
