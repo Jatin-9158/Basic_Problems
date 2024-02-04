@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
     string reverseWords(string s) {
@@ -21,3 +22,10 @@ public:
        return reversed;
     }
 };
+int main()
+{ 
+  Solution S;
+  string s="Hello Hi ABC";
+  cout<<S.reverseWords(s);
+  return 0;
+}
