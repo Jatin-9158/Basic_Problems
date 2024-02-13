@@ -34,16 +34,23 @@ void Insert(int N)
   }
 }
 
-void Insert_at_Nodes(int Number_of_Nodes,int Postion)
+void Insert_at_Nodes(int Number_of_Nodes,int Position)
 {
   temp=first;
   int i=0;
-  while(i<Postion-1 && temp->next!=NULL)
+  if(temp->next!=NULL)
   {
+    temp2=temp->next;    
+  }
+  else
+  {
+   while(i<Position-1 && temp->next!=NULL)
+   {
      temp=temp->next;
      i++;
+   }
+   temp2=temp->next;
   }
-  temp2=temp->next;
   for(int i=0;i<Number_of_Nodes;i++)
   {
      create();
@@ -65,29 +72,31 @@ void display()
 int main()
 {
    int Number_of_Elements,index,Number;
-   char Choice;
+   int Choice;
    printf("Enter the Number of Elements:");
    scanf("%d",&Number_of_Elements);
    Insert(Number_of_Elements);
-   printf("Want to Add More Elements :");
-   printf("Press Y for Yes");
-   printf("Press N for No");
+   printf("Want to Add More Elements :\n");
+   printf("Press 1 for Yes\n");
+   printf("Press 2 for No\n");
    printf("Enter Choice:");
    scanf("%d",&Choice);
    switch (Choice)
-   {
-   case 'Y':
+  {
+   case 1:
       printf("Tell me Index( 0 based Indexing !):");
-      scanf("%d",index);
+      scanf("%d",&index);
       printf("Enter Number of Elements:");
-      scanf("%d",Number);
+      scanf("%d",&Number);
       Insert_at_Nodes(Number,index);
       break;
-   case 'N':
-      
+   case 2:
+      printf("Proceeding !\n");
       break;
+
    default:
       break;
    }
+   display();
 
 }
